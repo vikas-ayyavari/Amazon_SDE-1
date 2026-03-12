@@ -1,0 +1,18 @@
+Tree Traversal
+1. Depth First Search 
+2. Breadth first Search 
+
+Depth First Search - Inorder (left , root, right), Preorder(root, left, right), PostOrder (left , right, root).
+
+PreOrder
+
+Input: Binary Tree: 4 2 5 3 -1 7 6 -1 9 -1 -1 8 -1 1
+
+Output: Preorder: [4, 2, 3, 9, 1, 5, 7, 6, 8] 
+Explanation: We traverse the binary tree in the order of Root, Left then Right recursively resulting in the following traversal:
+
+Input: Binary Tree: 1 2 3 4 5 6 7 -1 -1 8 -1 -1 -1 9 10
+
+Output: Preorder: [1, 2, 4, 5, 8, 3, 6, 7, 9, 10] 
+Explanation: We traverse the binary tree in the order of Root, Left then Right recursively resulting in the following traversal:
+
