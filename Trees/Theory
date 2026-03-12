@@ -1,1 +1,22 @@
+/**
+Binary Trees
 
+1.Full Binary Tree - has 2 or 0 children
+2. complete Binary Level
+--all levels are completely filled except the last
+-- the last level has all node on left as possbile (Even a single leaf node or double it should be always left  not right)
+3.perfect Binary Tree
+--Height of the tree at max log(n) n is number of nodes
+4. Degenerate Tree - EveryNode has a single child at left */
+
+Structure [left val of the tree , Tree value whiich is in middle , right value of tree]
+class Node{
+  int val;
+  Node left;
+  Node right;
+
+  public Node(int x){
+    val = x;
+  }
+
+}
