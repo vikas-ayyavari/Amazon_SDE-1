@@ -1,0 +1,18 @@
+// using stack not recurrion 
+
+List<Integer> res = new ArrayList<>();
+if root == null return null;
+
+Stack<TreeNode> s = new Stack<>();
+s.add(root);
+while(!s.isEmpty()){
+TreeNode temp = s.pop();
+res.add(temp.val);
+
+// to iterate from root left right, we need to add right first in stack , becz in stack what ever last added will shown in first 
+//So we need left before right thats why we add right 
+if(temp.right != null) s.add(temp.right);
+if(temp.left != null) s.add(temp.left);
+}
+
+return res;
