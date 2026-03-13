@@ -1,0 +1,24 @@
+List<Interger> res = new ArrayList<>();
+if(root == null) return res;
+Stack<TreeNode> s = new Stack<TreeNode>();
+TreeNode temp = root;
+while(true){
+// adding all the lefts till leaf node 
+if(temp != null){
+s.push(temp);
+temp = temp.left;
+}
+//if it reaches leafnode then we see for stack if its empty or if empty then there is no nodes left explore or root is a null
+//we will break the loop else we will pop the elemnt add its value to res List and we will look for right
+
+// left root right 
+
+else{
+if(s.isEmpty()) break;
+temp = s.pop(); 
+res.add(temp.val);
+temp = temp.right;
+}
+}
+return res;
+
