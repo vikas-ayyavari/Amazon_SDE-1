@@ -1,0 +1,42 @@
+// Level order
+
+Here we travers Tree in BFS method , to achieve this we need a help of a data struture to store the data at each level
+
+So What exactly we do is for each node we add the repespective left right node to the Queue 
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        if(root == null) return res;
+
+        Queue<TreeNode> q = new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+            int l = q.size();
+            List<Integer> sub = new ArrayList<>();
+            for(int i = 0;i<l;i++){
+                TreeNode temp = q.poll();
+                sub.add(temp.val);
+                if(temp.left != null) q.offer(temp.left);
+                if(temp.right != null) q.offer(temp.right);
+            }
+            res.add(sub);
+        }
+        return res;
+    }
+}
